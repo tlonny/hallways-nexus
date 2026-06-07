@@ -146,7 +146,6 @@ const writeManifest = async (spawn: ManifestSpawn, waterFrames: readonly string[
         _version: MANIFEST_VERSION,
         meta: {
             name: "hallways-nexus",
-            author: "tlonny <timlonsdale@gmail.com>"
         },
         track: asPosixRelative(trackPath),
         model: basename(MODEL_GLB_PATH),
