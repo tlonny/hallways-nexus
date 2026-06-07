@@ -148,26 +148,24 @@ const writeManifest = async (spawn: ManifestSpawn, waterFrames: readonly string[
             name: "hallways-nexus",
             author: "tlonny <timlonsdale@gmail.com>"
         },
-        level: {
-            track: asPosixRelative(trackPath),
-            model: basename(MODEL_GLB_PATH),
-            collider: basename(COLLIDER_GLB_PATH),
-            spawn,
-            materials: {
-                floor: {
-                    frames: [asPosixRelative(FLOOR_TEXTURE_DIST_PATH)] 
-                },
-                water: {
-                    frames: waterFrames.map(asPosixRelative),
-                    animation_speed: WATER_ANIMATION_SPEED,
-                    color: MATERIAL_COLOR_WHITE_50_ALPHA,
-                },
-                rim: {
-                    color: MATERIAL_COLOR_GREEN,
-                },
-                red: {
-                    color: MATERIAL_COLOR_RED,
-                },
+        track: asPosixRelative(trackPath),
+        model: basename(MODEL_GLB_PATH),
+        collider: basename(COLLIDER_GLB_PATH),
+        spawn,
+        materials: {
+            floor: {
+                frames: [asPosixRelative(FLOOR_TEXTURE_DIST_PATH)] 
+            },
+            water: {
+                frames: waterFrames.map(asPosixRelative),
+                animation_speed: WATER_ANIMATION_SPEED,
+                color: MATERIAL_COLOR_WHITE_50_ALPHA,
+            },
+            rim: {
+                color: MATERIAL_COLOR_GREEN,
+            },
+            red: {
+                color: MATERIAL_COLOR_RED,
             },
         },
         portals: {
