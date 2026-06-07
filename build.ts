@@ -144,9 +144,6 @@ const loadSpawn = async (): Promise<ManifestSpawn> => {
 const writeManifest = async (spawn: ManifestSpawn, waterFrames: readonly string[], trackPath: string): Promise<void> => {
     const manifest = {
         _version: MANIFEST_VERSION,
-        meta: {
-            name: "hallways-nexus",
-        },
         track: asPosixRelative(trackPath),
         model: basename(MODEL_GLB_PATH),
         collider: basename(COLLIDER_GLB_PATH),
